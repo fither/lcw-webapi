@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Business.Abstract;
+using DataAccess.Abstract;
 using Entities.DataTransferObjects;
 using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using WebAPI.LoggerService;
 
 namespace WebAPI.Controllers
 {
@@ -15,8 +15,8 @@ namespace WebAPI.Controllers
     {
         private IRepositoryWrapper _wrapper;
         private IMapper _mapper;
-        private ILoggerManager _logger;
-        public CategoriesController(IRepositoryWrapper wrapper, IMapper mapper, ILoggerManager logger)
+        private ILoggerManagerRepository _logger;
+        public CategoriesController(IRepositoryWrapper wrapper, IMapper mapper, ILoggerManagerRepository logger)
         {
             _wrapper = wrapper;
             _mapper = mapper;
@@ -34,7 +34,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -47,7 +47,7 @@ namespace WebAPI.Controllers
                 var category = _wrapper.Category.GetById(id);
                 if (category == null)
                 {
-                    _logger.Error($"Category {id} not found");
+                    _logger.Save(404, $"Category {id} not found");
                     return NotFound($"Category {id} not found");
                 }
 
@@ -56,7 +56,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -79,7 +79,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, ex.Message);
             }
         }
@@ -104,7 +104,7 @@ namespace WebAPI.Controllers
 
                 if(categoryEntity == null)
                 {
-                    _logger.Error($"Category {id} not found for updating");
+                    _logger.Save(404, $"Category {id} not found for updating");
                     return NotFound("Category is not exist");
                 }
 
@@ -115,7 +115,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, ex.Message);
             }
         }
@@ -129,7 +129,7 @@ namespace WebAPI.Controllers
 
                 if (category == null)
                 {
-                    _logger.Error($"Category {id} not found for deleting");
+                    _logger.Save(404, $"Category {id} not found for deleting");
                     return NotFound($"Category {id} not found for deleting");
                 }
 
@@ -139,7 +139,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }

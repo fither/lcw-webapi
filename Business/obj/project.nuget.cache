@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ggETjkcvckEqJWYeRWzPwnBXibosBrRx3dxNKHQFuBKT2edWRqIYHXLjaDphyb8R7CHXGZNS45ox/RjgiNiWLg==",
+  "dgSpecHash": "/zty7Hy1LhdJ9P8/1wkeaxrKOJbor+Gf5DbW0RzYNgEgxTzvCs8lQBzfyGu3hWqcZAQbIY+Sz1hPHkxeMhlxbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\Business\\Business.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.13.1\\microsoft.identitymodel.jsonwebtokens.6.13.1.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\microsoft.identitymodel.logging\\6.13.1\\microsoft.identitymodel.logging.6.13.1.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.13.1\\microsoft.identitymodel.tokens.6.13.1.nupkg.sha512",
+    "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",

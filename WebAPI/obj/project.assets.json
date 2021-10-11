@@ -1495,6 +1495,7 @@
         "dependencies": {
           "Entities": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.10",
+          "NLog": "4.7.11",
           "System.IdentityModel.Tokens.Jwt": "6.13.1"
         },
         "compile": {

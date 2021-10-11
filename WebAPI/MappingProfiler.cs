@@ -12,10 +12,12 @@ namespace WebAPI
             // List Dtos
             CreateMap<Product, ProductDto>();
             CreateMap<Category, CategoryDto>();
+            CreateMap<Log, LogDto>();
 
             // Update Dtos
             CreateMap<ProductUpdateDto, Product>();
             CreateMap<CategoryUpdateDto, Category>();
+            CreateMap<LogUpdateDto, Log>();
         }
     }
 }

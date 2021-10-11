@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Entities.DataTransferObjects;
 using System;
 using System.Collections.Generic;
-using WebAPI.LoggerService;
 using Entities.Models;
+using DataAccess.Abstract;
 
 namespace WebAPI.Controllers
 {
@@ -15,8 +15,8 @@ namespace WebAPI.Controllers
     {
         private IRepositoryWrapper _wrapper;
         private IMapper _mapper;
-        private ILoggerManager _logger;
-        public ProductsController(IRepositoryWrapper wrapper, IMapper mapper, ILoggerManager logger)
+        private ILoggerManagerRepository _logger;
+        public ProductsController(IRepositoryWrapper wrapper, IMapper mapper, ILoggerManagerRepository logger)
         {
             _wrapper = wrapper;
             _mapper = mapper;
@@ -30,12 +30,13 @@ namespace WebAPI.Controllers
             {
                 var products = _wrapper.Product.GetAll();
                 var productsResult = _mapper.Map<List<ProductDto>>(products);
+                _logger.Save(200, "Fetched all products");
                 return Ok(productsResult);
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message);
-                return StatusCode(500, "Internal Server Error");
+                _logger.Save(500, ex.Message);
+                return StatusCode(500, ex.Message);
             }
         }
 
@@ -47,17 +48,17 @@ namespace WebAPI.Controllers
                 var product = _wrapper.Product.GetById(id);
                 if (product == null)
                 {
-                    _logger.Error($"Product not found by id = {id}");
+                    _logger.Save(400, $"Product not found by id = {id}");
                     return NotFound($"Product not found by id = {id}");
                 }
 
-                _logger.Info($"Product found by id = {id}");
+                _logger.Save(200, $"Product found by id = {id}");
                 var productResult = _mapper.Map<ProductDto>(product);
                 return Ok(productResult);
             }
             catch (Exception ex)
             {
-                _logger.Error($"Product fetch error: {ex.Message}");
+                _logger.Save(500, $"Product fetch error: {ex.Message}");
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -80,7 +81,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, ex.Message);
             }
         }
@@ -105,7 +106,7 @@ namespace WebAPI.Controllers
 
                 if(productEntity == null)
                 {
-                    _logger.Error($"Product {id} not found for updating");
+                    _logger.Save(404, $"Product {id} not found for updating");
                     return NotFound("Product is not exist");
                 }
 
@@ -116,7 +117,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, ex.Message);
             }
         }
@@ -130,7 +131,7 @@ namespace WebAPI.Controllers
 
                 if(product == null)
                 {
-                    _logger.Error($"Product {id} not found for deleting");
+                    _logger.Save(404, $"Product {id} not found for deleting");
                     return NotFound();
                 }
 
@@ -140,7 +141,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }

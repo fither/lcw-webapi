@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Business.Abstract;
 using Business.Concrete;
 using Microsoft.AspNetCore.Http;
-using WebAPI.LoggerService;
+using DataAccess.Abstract;
 
 namespace WebAPI.Extensions
 {
@@ -36,7 +36,7 @@ namespace WebAPI.Extensions
 
         public static void ConfigureLoggerService(this IServiceCollection services)
         {
-            services.AddSingleton<ILoggerManager, LoggerManager>();
+            services.AddScoped<ILoggerManagerRepository, LoggerManagerRepository>();
         }
 
         public static void AddApplicationError(this HttpResponse response, string message)
