@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M5VDFnzOTodHxkhnwUzJGvoduc3niZDKvtmqlokYQ37t2QR4iCWcoNrWqpNZ25tCxOUdDk/dML5J6ujD9tKtJA==",
+  "dgSpecHash": "DY8w2qrAYcy2n9tnSt4kYPgaB/HbFcupTzwZc+aMtYMprbai6ntyJBqKZj0iLAwknj87wldDxLx/7Q7Xoo/eMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\Entities\\Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
