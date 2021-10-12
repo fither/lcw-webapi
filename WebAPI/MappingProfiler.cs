@@ -18,6 +18,7 @@ namespace WebAPI
             CreateMap<ProductUpdateDto, Product>();
             CreateMap<CategoryUpdateDto, Category>();
             CreateMap<LogUpdateDto, Log>();
+            CreateMap<UserAddDto, User>();
         }
     }
 }

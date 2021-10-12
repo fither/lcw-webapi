@@ -6,6 +6,7 @@ namespace Business.Abstract
     {
         IProductRepository Product { get; }
         ICategoryRepository Category { get; }
+        IUserRepository User { get; }
 
         void Save();
     }

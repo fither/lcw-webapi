@@ -13,3 +13,18 @@ C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\DataAcce
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\DataAccess.dll
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\bin\Debug\net5.0\DataAccess.dll
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\bin\Debug\net5.0\Entities.dll
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\bin\Debug\net5.0\Entities.pdb
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\obj\Debug\net5.0\DataAccess.csprojAssemblyReference.cache
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CopyComplete
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\obj\Debug\net5.0\DataAccess.dll
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+C:\Users\cumhu\Desktop\Projeler\C#\WebApi\DataAccess\obj\Debug\net5.0\DataAccess.pdb

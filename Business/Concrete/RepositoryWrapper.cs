@@ -13,6 +13,7 @@ namespace Business.Concrete
         }
         private IProductRepository _product;
         private ICategoryRepository _category;
+        private IUserRepository _user;
         public IProductRepository Product
         {
             get
@@ -33,6 +34,18 @@ namespace Business.Concrete
                     _category = new CategoryRepository(_context);
                 }
                 return _category;
+            }
+        }
+
+        public IUserRepository User
+        {
+            get
+            {
+                if (_user == null)
+                {
+                    _user = new UserRepository(_context);
+                }
+                return _user;
             }
         }
 

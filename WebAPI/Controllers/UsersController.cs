@@ -1,7 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Entities.Models;
+using Entities.DataTransferObjects;
+using AutoMapper;
 using DataAccess.Abstract;
+using Business.Abstract;
 
 namespace WebAPI.Controllers
 {
@@ -10,12 +13,17 @@ namespace WebAPI.Controllers
     [Route("api/auth")]
     public class UsersController: ControllerBase
     {
-
+        private IRepositoryWrapper _wrapper;
         private IUserServiceRepository _userService;
+        //private IUserRepository _userRepository;
+        private IMapper _mapper;
 
-        public UsersController(IUserServiceRepository userService)
+        public UsersController(IUserServiceRepository userService, IMapper mapper, IRepositoryWrapper wrapper)
         {
             _userService = userService;
+            //_userRepository = userRepository;
+            _mapper = mapper;
+            _wrapper = wrapper;
         }
 
         [AllowAnonymous]
@@ -40,6 +48,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
+        [AllowAnonymous]
         public IActionResult GetAll()
         {
             var users = _userService.GetAll();
@@ -48,6 +57,17 @@ namespace WebAPI.Controllers
                     true,
                     users
                 ));
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("register")]
+        public IActionResult Add([FromBody] User user)
+        {
+            _wrapper.User.Create(user);
+      
+            _wrapper.Save();
+            return Ok();
         }
 
     }
