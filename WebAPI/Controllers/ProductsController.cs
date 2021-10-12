@@ -31,12 +31,16 @@ namespace WebAPI.Controllers
                 var products = _wrapper.Product.GetAll();
                 var productsResult = _mapper.Map<List<ProductDto>>(products);
                 _logger.Save(200, "Fetched all products");
-                return Ok(productsResult);
+                return Ok(new Response(
+                        200,
+                        true,
+                        productsResult
+                    ));
             }
             catch (Exception ex)
             {
                 _logger.Save(500, ex.Message);
-                return StatusCode(500, ex.Message);
+                return StatusCode(500, "Internal Server Error");
             }
         }
 
@@ -54,7 +58,11 @@ namespace WebAPI.Controllers
 
                 _logger.Save(200, $"Product found by id = {id}");
                 var productResult = _mapper.Map<ProductDto>(product);
-                return Ok(productResult);
+                return Ok(new Response(
+                        200,
+                        true,
+                        productResult
+                    ));
             }
             catch (Exception ex)
             {
@@ -70,19 +78,27 @@ namespace WebAPI.Controllers
             {
                 if(!ModelState.IsValid)
                 {
-                    return BadRequest("Model object is not valid");
+                    return BadRequest(new Response(
+                            400,
+                            false,
+                            "Model object is not valid"
+                        ));
                 }
 
                 var productEntity = _mapper.Map<Product>(product);
 
                 _wrapper.Product.Create(productEntity);
                 _wrapper.Save();
-                return Ok(productEntity);
+                return Ok(new Response(
+                        200,
+                        true,
+                        productEntity
+                    ));
             }
             catch (Exception ex)
             {
                 _logger.Save(500, ex.Message);
-                return StatusCode(500, ex.Message);
+                return StatusCode(500, "Internal Server Error");
             }
         }
 
@@ -93,12 +109,20 @@ namespace WebAPI.Controllers
             {
                 if(product == null)
                 {
-                    return BadRequest("Product object is null");
+                    return BadRequest(new Response(
+                            400,
+                            false,
+                            "Product object is null"
+                        ));
                 }
 
                 if(!ModelState.IsValid)
                 {
-                    return BadRequest("Model object is not valid");
+                    return BadRequest(new Response(
+                            400,
+                            false,
+                            "Model object is not valid"
+                        ));
                 }
 
                 var productEntity = _wrapper.Product.GetById(id);
@@ -107,18 +131,26 @@ namespace WebAPI.Controllers
                 if(productEntity == null)
                 {
                     _logger.Save(404, $"Product {id} not found for updating");
-                    return NotFound("Product is not exist");
+                    return NotFound(new Response(
+                            404,
+                            false,
+                            "Product is not exist"
+                        ));
                 }
 
                 _wrapper.Product.Update(productEntity);
                 _wrapper.Save();
 
-                return Ok(productEntity);
+                return Ok(new Response(
+                        200,
+                        true,
+                        productEntity
+                    ));
             }
             catch (Exception ex)
             {
                 _logger.Save(500, ex.Message);
-                return StatusCode(500, ex.Message);
+                return StatusCode(500, "Internal Server Error");
             }
         }
 
@@ -132,12 +164,20 @@ namespace WebAPI.Controllers
                 if(product == null)
                 {
                     _logger.Save(404, $"Product {id} not found for deleting");
-                    return NotFound();
+                    return NotFound(new Response(
+                            404,
+                            false,
+                            "Product is not exist"
+                        ));
                 }
 
                 _wrapper.Product.Delete(product);
                 _wrapper.Save();
-                return Ok(product);
+                return Ok(new Response(
+                        200,
+                        true,
+                        product
+                    ));
             }
             catch (Exception ex)
             {

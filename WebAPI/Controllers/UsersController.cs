@@ -20,22 +20,34 @@ namespace WebAPI.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult Authenticate([FromBody] User userParam)
+        public IActionResult Authenticate([FromBody] Auth userParam)
         {
             var user = _userService.Authenticate(userParam.Username, userParam.Password);
 
             if (user == null)
             {
-                return BadRequest("Username or password is wrong!");
+                return BadRequest(new Response(
+                        400,
+                        false,
+                        "Username or password is wrong!"
+                    ));
             }
-            return Ok(user);
+            return Ok(new Response(
+                    200,
+                    true,
+                    user
+                ));
         }
 
         [HttpGet]
         public IActionResult GetAll()
         {
             var users = _userService.GetAll();
-            return Ok(users);
+            return Ok(new Response(
+                    200,
+                    true,
+                    users
+                ));
         }
 
     }
