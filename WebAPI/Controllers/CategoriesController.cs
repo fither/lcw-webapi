@@ -30,15 +30,11 @@ namespace WebAPI.Controllers
             {
                 var categories = _wrapper.Category.GetAll();
                 var categoryResult = _mapper.Map<List<CategoryDto>>(categories);
-                return Ok(new Response(
-                        200,
-                        true,
-                        categoryResult
-                    ));
+                return Ok(categoryResult);
             }
             catch (Exception ex)
             {
-                _logger.Save(500, ex.Message);
+                //_logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -51,24 +47,16 @@ namespace WebAPI.Controllers
                 var category = _wrapper.Category.GetById(id);
                 if (category == null)
                 {
-                    _logger.Save(404, $"Category {id} not found");
-                    return NotFound(new Response(
-                            404,
-                            false,
-                            "Category is not exist"
-                        ));
+                    //_logger.Save(404, $"Category {id} not found");
+                    return NotFound("Category is not exist");
                 }
 
                 var categoryResult = _mapper.Map<CategoryDto>(category);
-                return Ok(new Response(
-                        200,
-                        true,
-                        categoryResult
-                    ));
+                return Ok(categoryResult);
             }
             catch (Exception ex)
             {
-                _logger.Save(500, ex.Message);
+                //_logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -80,26 +68,18 @@ namespace WebAPI.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    return BadRequest(new Response(
-                            400,
-                            false,
-                            "Model object is not valid"
-                        ));
+                    return BadRequest("Model object is not valid");
                 }
 
                 var categoryEntity = _mapper.Map<Category>(category);
 
                 _wrapper.Category.Create(categoryEntity);
                 _wrapper.Save();
-                return Ok(new Response(
-                        200,
-                        true,
-                        categoryEntity
-                    ));
+                return Ok(categoryEntity);
             }
             catch (Exception ex)
             {
-                _logger.Save(500, ex.Message);
+                //_logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -111,20 +91,12 @@ namespace WebAPI.Controllers
             {
                 if(category == null)
                 {
-                    return BadRequest(new Response(
-                            400,
-                            false,
-                            "Category object is null"
-                        ));
+                    return BadRequest("Category object is null");
                 }
 
                 if(!ModelState.IsValid)
                 {
-                    return BadRequest(new Response(
-                            400,
-                            false,
-                            "Model object is not valid"
-                        ));
+                    return BadRequest("Model object is not valid");
                 }
 
                 var categoryEntity = _wrapper.Category.GetById(id);
@@ -132,12 +104,8 @@ namespace WebAPI.Controllers
 
                 if(categoryEntity == null)
                 {
-                    _logger.Save(404, $"Category {id} not found for updating");
-                    return NotFound(new Response(
-                            404,
-                            false,
-                            "Category is not exist"
-                        ));
+                    //_logger.Save(404, $"Category {id} not found for updating");
+                    return NotFound("Category is not exist");
                 }
 
                 _wrapper.Category.Update(categoryEntity);
@@ -147,7 +115,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                _logger.Save(500, ex.Message);
+                //_logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -161,25 +129,17 @@ namespace WebAPI.Controllers
 
                 if (category == null)
                 {
-                    _logger.Save(404, $"Category {id} not found for deleting");
-                    return NotFound(new Response(
-                            404,
-                            false,
-                            "Category is not exist"
-                        ));
+                    //_logger.Save(404, $"Category {id} not found for deleting");
+                    return NotFound("Category is not exist");
                 }
 
                 _wrapper.Category.Delete(category);
                 _wrapper.Save();
-                return Ok(new Response(
-                        200,
-                        true,
-                        category
-                    ));
+                return Ok(category);
             }
             catch (Exception ex)
             {
-                _logger.Save(500, ex.Message);
+                //_logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }

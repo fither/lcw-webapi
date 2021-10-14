@@ -63,7 +63,7 @@ namespace WebAPI
                 };
             });
 
-            services.AddScoped<IUserServiceRepository, UserServiceRepository>();
+            services.AddScoped<IAuthRepository, AuthRepository>();
 
             //services.AddSwaggerGen(c =>
             //{

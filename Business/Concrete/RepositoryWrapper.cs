@@ -1,19 +1,23 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
 using DataAccess.Concrete;
+using Microsoft.Extensions.Options;
 
 namespace Business.Concrete
 {
     public class RepositoryWrapper : IRepositoryWrapper
     {
         private DataContext _context;
-        public RepositoryWrapper(DataContext context)
+        private readonly IOptions<AppSettings> _appSettings;
+        public RepositoryWrapper(IOptions<AppSettings> appSettings, DataContext context)
         {
             _context = context;
+            _appSettings = appSettings;
         }
         private IProductRepository _product;
         private ICategoryRepository _category;
         private IUserRepository _user;
+        private IAuthRepository _auth;
         public IProductRepository Product
         {
             get
@@ -37,11 +41,23 @@ namespace Business.Concrete
             }
         }
 
+        public IAuthRepository Auth
+        {
+            get
+            {
+                if (_auth == null)
+                {
+                    _auth = new AuthRepository(_appSettings, _context);
+                }
+                return _auth;
+            }
+        }
+
         public IUserRepository User
         {
             get
             {
-                if (_user == null)
+                if(_user == null)
                 {
                     _user = new UserRepository(_context);
                 }

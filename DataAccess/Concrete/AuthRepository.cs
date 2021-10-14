@@ -1,30 +1,28 @@
 ﻿using DataAccess.Abstract;
-using Microsoft.Extensions.Options;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using Entities.Models;
+using Microsoft.Extensions.Options;
 
 namespace DataAccess.Concrete
 {
-    public class UserServiceRepository: IUserServiceRepository
+    public class AuthRepository: IAuthRepository
     {
         private readonly AppSettings _appSettings;
         private DataContext _context;
-        public UserServiceRepository(IOptions<AppSettings> appSettings, DataContext context)
+        public AuthRepository(IOptions<AppSettings> appSettings, DataContext context)
         {
             _appSettings = appSettings.Value;
             _context = context;
         }
 
-        public User Authenticate(string username, string password)
+        public User Authenticate(AuthDto auth)
         {
-            var user = _context.Users.SingleOrDefault(x => x.Username.Equals(username) && x.Password.Equals(password));
+            var user = _context.Users.SingleOrDefault(x => x.Username.Equals(auth.Username) && x.Password.Equals(auth.Password));
 
             if(user == null)
             {
@@ -49,15 +47,6 @@ namespace DataAccess.Concrete
             user.Password = null;
 
             return user;
-        }
-
-        public IEnumerable<User> GetAll()
-        {
-            return _context.Users.ToList().Select(x =>
-            {
-                x.Password = null;
-                return x;
-            });
         }
     }
 }

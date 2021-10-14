@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\cumhu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cumhu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Onur HAMARAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\Entities\\Entities.csproj"
+              "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\Entities\\Entities.csproj"
               }
             }
           }
@@ -72,21 +72,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\Entities\\Entities.csproj": {
+    "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\cumhu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\WebApi\\Entities\\obj\\",
+        "projectPath": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cumhu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Onur HAMARAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -126,7 +126,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

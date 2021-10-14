@@ -30,17 +30,13 @@ namespace WebAPI.Controllers
             {
                 var products = _wrapper.Product.GetAll();
                 var productsResult = _mapper.Map<List<ProductDto>>(products);
-                _logger.Save(200, "Fetched all products");
-                return Ok(new Response(
-                        200,
-                        true,
-                        productsResult
-                    ));
+                //_logger.Save(200, "Fetched all products");
+                return Ok(productsResult);
             }
             catch (Exception ex)
             {
-                _logger.Save(500, ex.Message);
-                return StatusCode(500, "Internal Server Error");
+                //_logger.Save(500, ex.Message);
+                return StatusCode(500, ex.Message);
             }
         }
 
@@ -52,21 +48,17 @@ namespace WebAPI.Controllers
                 var product = _wrapper.Product.GetById(id);
                 if (product == null)
                 {
-                    _logger.Save(400, $"Product not found by id = {id}");
+                    //_logger.Save(400, $"Product not found by id = {id}");
                     return NotFound($"Product not found by id = {id}");
                 }
 
-                _logger.Save(200, $"Product found by id = {id}");
+                //_logger.Save(200, $"Product found by id = {id}");
                 var productResult = _mapper.Map<ProductDto>(product);
-                return Ok(new Response(
-                        200,
-                        true,
-                        productResult
-                    ));
+                return Ok(productResult);
             }
             catch (Exception ex)
             {
-                _logger.Save(500, $"Product fetch error: {ex.Message}");
+                //_logger.Save(500, $"Product fetch error: {ex.Message}");
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -78,26 +70,18 @@ namespace WebAPI.Controllers
             {
                 if(!ModelState.IsValid)
                 {
-                    return BadRequest(new Response(
-                            400,
-                            false,
-                            "Model object is not valid"
-                        ));
+                    return BadRequest("Model object is not valid");
                 }
 
                 var productEntity = _mapper.Map<Product>(product);
 
                 _wrapper.Product.Create(productEntity);
                 _wrapper.Save();
-                return Ok(new Response(
-                        200,
-                        true,
-                        productEntity
-                    ));
+                return Ok(productEntity);
             }
             catch (Exception ex)
             {
-                _logger.Save(500, ex.Message);
+                //_logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -109,20 +93,12 @@ namespace WebAPI.Controllers
             {
                 if(product == null)
                 {
-                    return BadRequest(new Response(
-                            400,
-                            false,
-                            "Product object is null"
-                        ));
+                    return BadRequest("Product object is null");
                 }
 
                 if(!ModelState.IsValid)
                 {
-                    return BadRequest(new Response(
-                            400,
-                            false,
-                            "Model object is not valid"
-                        ));
+                    return BadRequest("Model object is not valid");
                 }
 
                 var productEntity = _wrapper.Product.GetById(id);
@@ -130,26 +106,18 @@ namespace WebAPI.Controllers
 
                 if(productEntity == null)
                 {
-                    _logger.Save(404, $"Product {id} not found for updating");
-                    return NotFound(new Response(
-                            404,
-                            false,
-                            "Product is not exist"
-                        ));
+                    //_logger.Save(404, $"Product {id} not found for updating");
+                    return NotFound("Product is not exist");
                 }
 
                 _wrapper.Product.Update(productEntity);
                 _wrapper.Save();
 
-                return Ok(new Response(
-                        200,
-                        true,
-                        productEntity
-                    ));
+                return Ok(productEntity);
             }
             catch (Exception ex)
             {
-                _logger.Save(500, ex.Message);
+                //_logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -163,25 +131,17 @@ namespace WebAPI.Controllers
 
                 if(product == null)
                 {
-                    _logger.Save(404, $"Product {id} not found for deleting");
-                    return NotFound(new Response(
-                            404,
-                            false,
-                            "Product is not exist"
-                        ));
+                    //_logger.Save(404, $"Product {id} not found for deleting");
+                    return NotFound("Product is not exist");
                 }
 
                 _wrapper.Product.Delete(product);
                 _wrapper.Save();
-                return Ok(new Response(
-                        200,
-                        true,
-                        product
-                    ));
+                return Ok(product);
             }
             catch (Exception ex)
             {
-                _logger.Save(500, ex.Message);
+                //_logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
