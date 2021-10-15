@@ -6,9 +6,11 @@ using System;
 using System.Collections.Generic;
 using Entities.Models;
 using DataAccess.Abstract;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebAPI.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/product")]
     public class ProductsController: ControllerBase
