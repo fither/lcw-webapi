@@ -35,6 +35,11 @@ namespace DataAccess.Concrete
             return _context.Users.FirstOrDefault(user => user.Id.Equals(id));
         }
 
+        public User GetByEmail(string email)
+        {
+            return _context.Users.FirstOrDefault(user => user.EmailAddress.Equals(email));
+        }
+
         public void Update(User user)
         {
             _context.Users.Update(user);
