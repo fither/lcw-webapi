@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "lBpua0j0ZiQNrheMp6PTg2Epkx/7XzNGM50JgpOrossCQakTozoKGZMo3FL/m8ZaMUJ0oLx97JKUwarAM1LGyw==",
+  "dgSpecHash": "4YUaut/8VqtnFku4ZA77caT3i+UU6qJ/ROjHfMogt81cuSsJ0yPqHreW4uXmC5LpGOQrt27w8xlT0UMKE68/lw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\DataAccess\\DataAccess.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",

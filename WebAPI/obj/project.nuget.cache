@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "0QJiTFaaps6pnTCpAkxx/IjW7G+b8k17FpQBaaXxyyv13MQG+YoZfv3RzTLtSAPn5o/KGWdlHPMbx2Dafy/u8w==",
+  "dgSpecHash": "2hji8p0hwezoH2XnWHMNE5llefdReHM1inY+sdDvV+EGdgPFhQlWaqNRjoPQssiU5h/M5z7II3BHyJ23HSfjkA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\WebAPI\\WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",
+    "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\bcrypt.net-next\\4.0.2\\bcrypt.net-next.4.0.2.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.10\\microsoft.aspnetcore.authentication.jwtbearer.5.0.10.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

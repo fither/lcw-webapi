@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using Entities.Models;
 using Microsoft.Extensions.Options;
+using BC = BCrypt.Net.BCrypt;
 
 namespace DataAccess.Concrete
 {
@@ -22,9 +23,9 @@ namespace DataAccess.Concrete
 
         public User Authenticate(AuthDto auth)
         {
-            var user = _context.Users.SingleOrDefault(x => x.Username.Equals(auth.Username) && x.Password.Equals(auth.Password));
+            var user = _context.Users.SingleOrDefault(x => x.Username.Equals(auth.Username));
 
-            if(user == null)
+            if(user == null || !BC.Verify(auth.Password, user.Password))
             {
                 return null;
             }
