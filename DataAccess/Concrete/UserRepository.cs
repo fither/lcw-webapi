@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using DataAccess.Abstract;
 using Entities.Models;
 using BC = BCrypt.Net.BCrypt;
@@ -9,13 +10,24 @@ namespace DataAccess.Concrete
     public class UserRepository : IUserRepository
     {
         private DataContext _context;
-        public UserRepository(DataContext context)
+        private readonly IMailService _mailService;
+        public UserRepository(DataContext context, IMailService mailService)
         {
             _context = context;
+            _mailService = mailService;
         }
-        public void Create(User user)
+        public async Task CreateAsync(User user)
         {
+            SecureRandom random = new SecureRandom();
+            var randomNumber = random.Next().ToString();
+
+            var email = new MailRequest(user.EmailAddress, "Mail Confirm", randomNumber);
+
+            await _mailService.SendEmailAsync(email);
+
             user.Password = BC.HashPassword(user.Password);
+            user.ConfirmCode = randomNumber;
+            user.Confirmed = false;
 
             _context.Users.Add(user);
         }

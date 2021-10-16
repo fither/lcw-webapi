@@ -3,6 +3,7 @@ using Business.Abstract;
 using DataAccess.Abstract;
 using Entities.DataTransferObjects;
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Collections.Generic;
 namespace WebAPI.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/category")]
     public class CategoriesController : ControllerBase
     {

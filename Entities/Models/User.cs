@@ -14,6 +14,8 @@ namespace Entities.Models
         public string Username { get; set; }
         public string Password { get; set; }
         public string EmailAddress { get; set; }
+        public bool Confirmed { get; set; }
+        public string ConfirmCode { get; set; }
         public string Token { get; set; }
     }
 }

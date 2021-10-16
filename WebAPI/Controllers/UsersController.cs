@@ -3,21 +3,25 @@ using Business.Abstract;
 using DataAccess.Abstract;
 using Entities.DataTransferObjects;
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("api/users")]
     public class UsersController: ControllerBase
     {
         private IRepositoryWrapper _wrapper;
         private IMapper _mapper;
         private ILoggerManagerRepository _logger;
+        
         public UsersController(IRepositoryWrapper wrapper, IMapper mapper, ILoggerManagerRepository logger)
         {
             _wrapper = wrapper;
@@ -43,7 +47,8 @@ namespace WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(UserAddDto user)
+        [AllowAnonymous]
+        public async Task<IActionResult> CreateAsync(UserAddDto user)
         {
             try
             {
@@ -61,14 +66,53 @@ namespace WebAPI.Controllers
 
                 var newUser = _mapper.Map<User>(user);
 
-                _wrapper.User.Create(newUser);
+                await _wrapper.User.CreateAsync(newUser);
+
                 _wrapper.Save();
 
-                return Ok(newUser);
+                return Ok("Registered Successfully");
             }
             catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
+            }
+        }
+        
+        [HttpPost]
+        [AllowAnonymous]
+        [Route("confirm")]
+        public async Task<IActionResult> ConfirmAccount(ConfirmAccount account)
+        {
+            try
+            {
+                User user = _wrapper.User.GetByEmail(account.EmailAddress);
+
+                if(user == null)
+                {
+                    return BadRequest("User not exist");
+                }
+                if(user.Confirmed == true)
+                {
+                    return BadRequest("User confirmed already");
+                }
+
+                if(user.ConfirmCode != account.ConfirmCode)
+                {
+                    return BadRequest("Confirm code is wrong!!");
+                }
+
+                User newUser = user;
+                newUser.ConfirmCode = "";
+                newUser.Confirmed = true;
+
+                _wrapper.User.Update(newUser);
+                _wrapper.Save();
+
+                return Ok("Confirmed Successfully");
+            }
+            catch(Exception ex)
+            {
+                return StatusCode(500, "Internal Server Error");
             }
         }
     }

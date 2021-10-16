@@ -39,10 +39,15 @@ namespace WebAPI
             services.ConfigureCors();
             services.ConfigureRepositoryWrapper();
 
+            // Mail Service
+
+            services.Configure<MailSettings>(Configuration.GetSection("MailSettings"));
+            services.AddTransient<IMailService, MailService>();
+
+            // JWT Auth
+
             var appSettingsSection = Configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
-
-            // JWT
             var appSettings = appSettingsSection.Get<AppSettings>();
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
             services.AddAuthentication(x =>

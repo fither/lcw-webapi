@@ -51,7 +51,7 @@ namespace WebAPI.Controllers
                 if (product == null)
                 {
                     //_logger.Save(400, $"Product not found by id = {id}");
-                    return NotFound($"Product not found by id = {id}");
+                    return BadRequest($"Product not found by id = {id}");
                 }
 
                 //_logger.Save(200, $"Product found by id = {id}");
@@ -109,7 +109,7 @@ namespace WebAPI.Controllers
                 if(productEntity == null)
                 {
                     //_logger.Save(404, $"Product {id} not found for updating");
-                    return NotFound("Product is not exist");
+                    return BadRequest("Product is not exist");
                 }
 
                 _wrapper.Product.Update(productEntity);
@@ -134,7 +134,7 @@ namespace WebAPI.Controllers
                 if(product == null)
                 {
                     //_logger.Save(404, $"Product {id} not found for deleting");
-                    return NotFound("Product is not exist");
+                    return BadRequest("Product is not exist");
                 }
 
                 _wrapper.Product.Delete(product);

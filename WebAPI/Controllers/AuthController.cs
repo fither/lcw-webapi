@@ -34,6 +34,10 @@ namespace WebAPI.Controllers
             {
                 return BadRequest("Username or password is wrong!");
             }
+            if (!user.Confirmed)
+            {
+                return BadRequest("User is not confirmed");
+            }
             return Ok(user);
         }
 

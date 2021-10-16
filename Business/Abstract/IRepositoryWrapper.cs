@@ -8,6 +8,7 @@ namespace Business.Abstract
         ICategoryRepository Category { get; }
         IUserRepository User { get; }
         IAuthRepository Auth { get; }
+        IMailService MailService { get; }
 
         void Save();
     }

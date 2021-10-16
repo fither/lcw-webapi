@@ -135,3 +135,7 @@ C:\Users\cumhu\Desktop\Projeler\C#\WebApi\WebAPI\obj\Debug\net5.0\ref\WebAPI.dll
 C:\Users\cumhu\Desktop\Projeler\C#\WebApi\WebAPI\obj\Debug\net5.0\WebAPI.pdb
 C:\Users\cumhu\Desktop\Projeler\C#\WebApi\WebAPI\obj\Debug\net5.0\WebAPI.genruntimeconfig.cache
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\bin\Debug\net5.0\BCrypt.Net-Next.dll
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\bin\Debug\net5.0\MailKit.dll
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\bin\Debug\net5.0\MimeKit.dll
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\bin\Debug\net5.0\NETCore.MailKit.dll
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\bin\Debug\net5.0\BouncyCastle.Crypto.dll

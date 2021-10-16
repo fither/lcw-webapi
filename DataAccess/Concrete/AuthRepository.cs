@@ -46,6 +46,7 @@ namespace DataAccess.Concrete
             user.Token = tokenHandler.WriteToken(token);
 
             user.Password = null;
+            user.ConfirmCode = null;
 
             return user;
         }
