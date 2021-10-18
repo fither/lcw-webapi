@@ -1,20 +1,3 @@
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\Business.deps.json
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\Business.dll
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\ref\Business.dll
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\Business.pdb
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\DataAccess.dll
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\Entities.dll
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\DataAccess.pdb
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\Entities.pdb
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.csproj.AssemblyReference.cache
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.csproj.CopyComplete
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.dll
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\ref\Business.dll
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.pdb
 C:\Users\cumhu\Desktop\Projeler\C#\WebApi\Business\bin\Debug\net5.0\Business.deps.json
 C:\Users\cumhu\Desktop\Projeler\C#\WebApi\Business\bin\Debug\net5.0\Business.dll
 C:\Users\cumhu\Desktop\Projeler\C#\WebApi\Business\bin\Debug\net5.0\ref\Business.dll
@@ -32,3 +15,20 @@ C:\Users\cumhu\Desktop\Projeler\C#\WebApi\Business\obj\Debug\net5.0\Business.csp
 C:\Users\cumhu\Desktop\Projeler\C#\WebApi\Business\obj\Debug\net5.0\Business.dll
 C:\Users\cumhu\Desktop\Projeler\C#\WebApi\Business\obj\Debug\net5.0\ref\Business.dll
 C:\Users\cumhu\Desktop\Projeler\C#\WebApi\Business\obj\Debug\net5.0\Business.pdb
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\Business.deps.json
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\Business.dll
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\ref\Business.dll
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\Business.pdb
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\DataAccess.dll
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\Entities.dll
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\DataAccess.pdb
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\bin\Debug\net5.0\Entities.pdb
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.csproj.AssemblyReference.cache
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.AssemblyInfoInputs.cache
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.AssemblyInfo.cs
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.csproj.CopyComplete
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.dll
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\ref\Business.dll
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\Business\obj\Debug\net5.0\Business.pdb

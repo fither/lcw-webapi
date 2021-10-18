@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Bu dosya, Web projenizin yayımlama/paket işlemi tarafından kullanılıyor. MSBuild dosyasını düzenleyerek
+bu işlemin davranışını düzenleyebilirsiniz. Bununla ilgili daha fazla bilgi edinmek için https://go.microsoft.com/fwlink/?LinkID=208121 adresini ziyaret edin. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAza8r84BgdEuYwrd3mwmP5QAAAAACAAAAAAAQZgAAAAEAACAAAAAK5XIowFhcOKQ2awxpkZxVqSY6DXtEpHk2c9kFDrxE9AAAAAAOgAAAAAIAACAAAABKFl/3Md1HS9lVkcIKrg35edBI/h7O9DHEllpbBYR4roAAAAB0bjnxe9KqtAq4TUvUGCpZg9mxLTreGdxMDGsSeYcE4/hHUAlnOSZJZDpBqbJtI+82mNEmRjd/gNChGNLf3MoQ5UmikBTPUW1OP4XOFdW18QtGGlPcEKaQ6xwJj35/RDk571ZHMp59kwqt27TCX+n7UfNm/sJGrhvPpns+Y4eZNEAAAACYx672Lq68tIQNzIVjGApLD3dbhnmRebeJYMnMZwb1PzUMKTdtSGgcfMspGuEAMd/IPoyZ/xIereVALPm7Fvt/</EncryptedPassword>
+    <History>True|2021-10-18T14:35:13.2507662Z;False|2021-10-18T17:32:06.7199181+03:00;False|2021-10-18T17:30:27.3542154+03:00;False|2021-10-18T17:27:45.3212121+03:00;False|2021-10-18T17:13:05.9095342+03:00;False|2021-10-18T17:11:41.1326483+03:00;False|2021-10-18T17:10:41.5821639+03:00;False|2021-10-18T17:08:55.1662909+03:00;False|2021-10-18T17:07:14.1145279+03:00;False|2021-10-18T17:04:19.8337568+03:00;False|2021-10-18T17:01:38.3605293+03:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <EFMigrations Include="DataAccess.Concrete.DataContext">
+      <Value>Data Source=tcp:webapistagingdb.database.windows.net,1433%3bInitial Catalog=WebAPI_db%3bUser Id=f1th%40webapistagingdb%3bPassword=toor-1423</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
