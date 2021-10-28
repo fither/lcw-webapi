@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\": {}
+    "C:\\Users\\cumhu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\lcw-webapi\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\Entities\\Entities.csproj",
-      "packagesPath": "C:\\Users\\Onur HAMARAT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Onur HAMARAT\\Desktop\\dotnet\\WebAPI\\Entities\\obj\\",
+      "projectPath": "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\lcw-webapi\\Entities\\Entities.csproj",
+      "packagesPath": "C:\\Users\\cumhu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cumhu\\Desktop\\Projeler\\C#\\lcw-webapi\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Onur HAMARAT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cumhu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.208\\RuntimeIdentifierGraph.json"
       }
     }
   }
