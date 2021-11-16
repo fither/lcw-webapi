@@ -9,7 +9,7 @@ namespace DataAccess.Concrete
 {
     public class UserRepository : IUserRepository
     {
-        private DataContext _context;
+        private readonly DataContext _context;
         private readonly IMailService _mailService;
         public UserRepository(DataContext context, IMailService mailService)
         {
@@ -18,7 +18,7 @@ namespace DataAccess.Concrete
         }
         public async Task CreateAsync(User user)
         {
-            SecureRandom random = new SecureRandom();
+            SecureRandom random = new();
             var randomNumber = random.Next().ToString();
 
             var email = new MailRequest(user.EmailAddress, "Mail Confirm", randomNumber);

@@ -137,8 +137,8 @@ C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\obj\Debug\net5.0\staticwebass
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\obj\Debug\net5.0\staticwebassets\WebAPI.StaticWebAssets.xml
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\obj\Debug\net5.0\scopedcss\bundle\WebAPI.styles.css
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\obj\Debug\net5.0\WebAPI.RazorTargetAssemblyInfo.cache
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\obj\Debug\net5.0\WebAPI.csproj.CopyComplete
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\obj\Debug\net5.0\WebAPI.dll
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\obj\Debug\net5.0\ref\WebAPI.dll
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\obj\Debug\net5.0\WebAPI.pdb
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\obj\Debug\net5.0\WebAPI.genruntimeconfig.cache
+C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\WebAPI\obj\Debug\net5.0\WebAPI.csproj.CopyComplete

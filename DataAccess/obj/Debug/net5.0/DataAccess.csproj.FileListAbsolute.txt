@@ -26,7 +26,6 @@ C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\DataAcce
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CopyComplete
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\DataAccess.dll
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
 C:\Users\Onur HAMARAT\Desktop\dotnet\WebAPI\DataAccess\obj\Debug\net5.0\DataAccess.pdb

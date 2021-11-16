@@ -36,7 +36,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                //_logger.Save(500, ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -58,7 +58,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                //_logger.Save(500, ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -81,7 +81,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                //_logger.Save(500, ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -117,7 +117,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                //_logger.Save(500, ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }
@@ -141,7 +141,7 @@ namespace WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                //_logger.Save(500, ex.Message);
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }

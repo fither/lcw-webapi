@@ -81,7 +81,7 @@ namespace WebAPI.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("confirm")]
-        public async Task<IActionResult> ConfirmAccount(ConfirmAccount account)
+        public IActionResult ConfirmAccount(ConfirmAccount account)
         {
             try
             {
@@ -112,6 +112,7 @@ namespace WebAPI.Controllers
             }
             catch(Exception ex)
             {
+                _logger.Save(500, ex.Message);
                 return StatusCode(500, "Internal Server Error");
             }
         }

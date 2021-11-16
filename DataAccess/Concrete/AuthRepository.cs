@@ -14,7 +14,7 @@ namespace DataAccess.Concrete
     public class AuthRepository: IAuthRepository
     {
         private readonly AppSettings _appSettings;
-        private DataContext _context;
+        private readonly DataContext _context;
         public AuthRepository(IOptions<AppSettings> appSettings, DataContext context)
         {
             _appSettings = appSettings.Value;

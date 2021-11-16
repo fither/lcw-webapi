@@ -26,7 +26,7 @@ namespace WebAPI.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> Authenticate([FromBody] AuthDto auth)
+        public IActionResult Authenticate([FromBody] AuthDto auth)
         {
             var user = _wrapper.Auth.Authenticate(auth);
 
@@ -42,7 +42,7 @@ namespace WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetCurrentUserAsync()
+        public IActionResult GetCurrentUserAsync()
         {
             var claimsIdentity = this.User.Identity as ClaimsIdentity;
             var userId = claimsIdentity.FindFirst(ClaimTypes.Name)?.Value;
@@ -54,7 +54,9 @@ namespace WebAPI.Controllers
 
             var user = _wrapper.User.GetById(int.Parse(userId));
 
-            return Ok(user);
+            var userEntity = _mapper.Map<UserDto>(user);
+
+            return Ok(userEntity);
         }
     }
 }
